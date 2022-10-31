@@ -9,6 +9,7 @@
 * Notes:
 - To run complle this program simple run the 'make' command.
 - All task commands are located in <tasks.cpp> and are tested/demonstrated in main.cpp
+- Added 'clean-all' command to the Makefile to remove all .o files AND output/task .pgm images
 
 
   
