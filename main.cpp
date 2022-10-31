@@ -19,7 +19,7 @@ void copy_array(int original_img[MAX_H][MAX_W], int out_img[MAX_H][MAX_W], int h
 
 int main()
 {
-  std::string input = "image2.pgm";
+  std::string input = "inImage.pgm";
   int img[MAX_H][MAX_W];
   int h, w;
   readImage(input, img, h, w);
@@ -39,6 +39,22 @@ int main()
   copy_array(img, out, h, w);
   white_box(out, h, w);
   writeImage("taskC.pgm",out, h, w);
+
+  //draw a 50% white frame for task D
+  copy_array(img, out, h, w);
+  white_frame(out, h, w);
+  writeImage("taskD.pgm",out, h, w);
+
+  //increase the image by 200% for task E
+  int ref[MAX_H][MAX_W];
+  copy_array(img, out, h, w);
+  double_scale(out, ref, h, w);
+  writeImage("taskE.pgm", ref, h*2, w*2);
+
+  //increase the image by 200% for task E
+  copy_array(img, out, h, w);
+  pixelate(out, h, w);
+  writeImage("taskF.pgm", out, h, w);
 
   return 0;
 }
