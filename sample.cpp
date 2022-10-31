@@ -1,13 +1,10 @@
 #include <iostream>
 
 #include "imageio.h"
-#include "tasks.h"
-
 
 int main()
 {
-
-  std::string input = "image1.pgm";
+  std::string input = "inImage.pgm";
   int img[MAX_H][MAX_W];
   int h, w;
   readImage(input, img, h, w); // read it from the file "inImage.pgm"
@@ -18,25 +15,14 @@ int main()
   // Now we can manipulate the image the way we like
   // for example we copy its contents into a new array
   int out[MAX_H][MAX_W];
-
   for(int row = 0; row < h; row++) {
     for(int col = 0; col < w; col++) {
       out[row][col] = img[row][col];
     }
   }
-  
+
   // and save this new image to file "outImage.pgm"
   writeImage("outImage.pgm",out, h, w);
-
-  inverse(img, h, w);
-
-  for(int row = 0; row < h; row++) {
-    for(int col = 0; col < w; col++) {
-      out[row][col] = img[row][col];
-    }
-  }
-  writeImage("taskA.pgm",out, h, w);
-
   
   return 0;
 }
