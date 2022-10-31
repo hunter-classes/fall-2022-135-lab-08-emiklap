@@ -51,7 +51,7 @@ int main()
   double_scale(out, ref, h, w);
   writeImage("taskE.pgm", ref, h*2, w*2);
 
-  //increase the image by 200% for task E
+  //pixelates image for task F
   copy_array(img, out, h, w);
   pixelate(out, h, w);
   writeImage("taskF.pgm", out, h, w);
