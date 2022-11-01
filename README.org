@@ -10,6 +10,7 @@
 - To run complle this program simple run the 'make' command.
 - All task commands are located in <tasks.cpp> and are tested/demonstrated in main.cpp
 - Added 'clean-all' command to the Makefile to remove all .out files, .o files AND output/task .pgm images
+- Task E will only work with images that are AT MOST half of the MAX_H/MAX_W dimensions
 
 
   
